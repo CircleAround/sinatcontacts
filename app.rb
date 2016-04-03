@@ -2,6 +2,6 @@ require 'sinatra'
 require 'sinatra/reloader'
 
 get '/' do
-  now = Time.now
-  "CurrentTime: #{now}"
+  @now = Time.now
+  erb :index
 end
