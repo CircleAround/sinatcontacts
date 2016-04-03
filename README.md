@@ -1,1 +1,1 @@
-# sinatcontact_v1
+# sinatcontacts_v1
