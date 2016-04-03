@@ -1,5 +1,8 @@
-require 'sinatra'
-require 'sinatra/reloader'
+# Gemを読み込む準備
+require 'rubygems'
+require 'bundler'
+# Gemfileに入っているgemを全部require
+Bundler.require
 
 get '/' do
   @now = Time.now
