@@ -1,3 +1,6 @@
+# このファイルはgitを扱う際に必要なファイルなので
+# サービスを作成する際にはなくても問題ありません。
+
 # Created by .ignore support plugin (hsz.mobi)
 ### Ruby template
 *.gem
