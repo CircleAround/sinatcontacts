@@ -26,8 +26,8 @@ end
 
 post '/contacts' do
   p params
-  @name = params[:name]
-  @contact = Contact.new(name: @name)
+  name = params[:name]
+  @contact = Contact.new(name: name)
   if @contact.save
     session[:message] = "#{@name}さんを作成しました"
     redirect '/'
