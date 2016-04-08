@@ -12,6 +12,5 @@ end
 
 post '/contacts' do
   p params
-  @name = params[:name]
   redirect '/'
 end
