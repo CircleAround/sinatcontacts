@@ -21,8 +21,8 @@ end
 
 post '/contacts' do
   p params
-  @name = params[:name]
-  @contact = Contact.new(name: @name)
+  name = params[:name]
+  @contact = Contact.new(name: name)
   @contact.save
   redirect '/'
 end
