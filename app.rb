@@ -4,6 +4,12 @@ require 'bundler'
 # Gemfileに入っているgemを全部require
 Bundler.require
 
+set :database, {adapter: "sqlite3", database: "contacts.sqlite3"}
+
+class Contact < ActiveRecord::Base
+  validates_presence_of :name
+end
+
 get '/' do
   @now = Time.now
   erb :index
@@ -15,5 +21,8 @@ end
 
 post '/contacts' do
   p params
+  name = params[:name]
+  @contact = Contact.new(name: name)
+  @contact.save
   redirect '/'
 end
